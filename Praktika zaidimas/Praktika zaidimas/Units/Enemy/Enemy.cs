@@ -6,31 +6,19 @@ using System.Threading.Tasks;
 
 namespace Praktika_zaidimas.Units.Enemy
 {
-    class Enemy
+    class enemies : Unit
     {
-        // Kintamieji
-        private int id;
-        private int x;
-        private int y;
-        private string name;
-
+        protected int id;
         // Konstruktorius
-        public Enemy(int id,int x, int y, string name)
+        public enemies(int id,int x, int y, string name) : base(x,y,name)
         {
             this.id = id;
-            this.x = x;
-            this.y = y;
-            this.name = name;
         }
 
         // Funkcijos
         public void MoveDown()
         {
             y++;
-        }
-        public void PrintInfo()
-        {
-            Console.WriteLine($" Enemy {name} is at {x}x{y}");
         }
         public int GetId()
         {

@@ -15,7 +15,7 @@ namespace Praktika_zaidimas.Screen
         private int height;
 
         private Hero hero;
-        private List<Enemy> enemies = new List<Enemy>();
+        private List<enemies> enemies = new List<enemies>();
 
         // Konstruktorius
         public GameScreen(int width, int height)
@@ -33,20 +33,20 @@ namespace Praktika_zaidimas.Screen
         {
             return hero;
         }
-        void AddEnemy(Enemy enemy)
+        void AddEnemy(enemies enemy)
         {
             enemies.Add(enemy);
         }
         public void MoveAllEnemiesDown()
         {
-            foreach (Enemy enemy in enemies)
+            foreach (enemies enemy in enemies)
             {
                 enemy.MoveDown();
             }
         }
-        public Enemy GetEnemyByID(int id)
+        public enemies GetEnemyByID(int id)
         {
-            foreach (Enemy enemy in enemies)
+            foreach (enemies enemy in enemies)
             {
                 if (enemy.GetId() == id)
                 {
@@ -58,7 +58,10 @@ namespace Praktika_zaidimas.Screen
         public void Render()
         {
             hero.PrintInfo();
-
+            foreach (enemies enemy in enemies)
+            {
+                enemy.PrintInfo();
+            }
         }
     }
 }

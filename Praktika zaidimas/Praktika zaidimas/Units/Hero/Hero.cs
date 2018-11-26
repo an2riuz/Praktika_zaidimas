@@ -6,21 +6,13 @@ using System.Threading.Tasks;
 
 namespace Praktika_zaidimas.Units.Hero
 {
-    class Hero
-    {
-        // Kintamieji
-        private int x;
-        private int y;
-        private string name;
-
+    class Hero : Unit { 
+       
         // Konstruktorius
-        public Hero(int x, int y, string name)
+        public Hero(int x, int y, string name) : base(x,y,name)
         {
-            this.x = x;
-            this.y = y;
-            this.name = name;
+            
         }
-
         // Funkcijos
         public void MoveRight()
         {
@@ -30,11 +22,5 @@ namespace Praktika_zaidimas.Units.Hero
         {
             x--;
         }
-        public void PrintInfo()
-        {
-            Console.WriteLine($" Hero {name} is at {x}x{y}");
-        }
-
-
     }
 }
