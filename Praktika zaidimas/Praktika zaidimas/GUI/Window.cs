@@ -13,7 +13,7 @@ namespace Praktika_zaidimas.GUI
         {
             this.frame = frame;
         }
-        void Render()
+        public void Render()
         {
 
         }
