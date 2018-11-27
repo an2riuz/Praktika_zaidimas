@@ -8,7 +8,7 @@ namespace Praktika_zaidimas.GUI
 {
     class TextBlock : GuiObject
     {
-        public TextBlock(int x, int y, int width) : base(x,y,width)
+        public TextBlock(int x, int y, int width, int height) : base(x,y,width,height)
         {
         }
     }
