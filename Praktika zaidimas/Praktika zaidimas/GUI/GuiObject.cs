@@ -8,17 +8,17 @@ namespace Praktika_zaidimas.GUI
 {
     class GuiObject
     {
-        private int x;
-        private int y;
-        private int width;
-        private int height;
+        protected int _x;
+        protected int _y;
+        protected int _width;
+        protected int _height;
 
         public GuiObject(int x, int y, int width, int height)
         {
-            this.x = x;
-            this.y = y;
-            this.width = width;
-            this.height = height;
+            _x = x;
+            _y = y;
+            _width = width;
+            _height = height;
         }
     }
 }

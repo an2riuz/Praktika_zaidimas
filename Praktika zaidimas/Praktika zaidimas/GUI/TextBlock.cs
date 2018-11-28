@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace Praktika_zaidimas.GUI
 {
-    class TextBlock : GuiObject
+    sealed class TextBlock : GuiObject
     {
         private List<TextLine> textBlocks = new List<TextLine>();
+
         public TextBlock(int x, int y, int width, List<string> textList) : base(x, y, width, 0)
         {
             for (int i = 0; i < textList.Count; i++)
@@ -16,10 +17,13 @@ namespace Praktika_zaidimas.GUI
                 textBlocks.Add(new TextLine(x, y + i, width, textList[i]));
             }
         }
+
         public void Render()
         {
-
+            for (int i = 0; i < textBlocks.Count; i++)
+            {
+                textBlocks[i].Render();
+            }
         }
-        
     }
 }

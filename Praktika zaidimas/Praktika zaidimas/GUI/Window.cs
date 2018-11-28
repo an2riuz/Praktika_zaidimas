@@ -8,14 +8,28 @@ namespace Praktika_zaidimas.GUI
 {
     class Window : GuiObject
     {
-        int frame;
-        public Window(int x, int y, int width, int height, char renderChar, int frame) : base(x, y, width, height)
+
+        private Frame border;
+        private int frame;
+
+        public Window(int x, int y, int width, int height, char borderChar) : base(x, y, width, height)
+        {
+            _x = x;
+            _y = y;
+            _width = width;
+            _height = height;
+
+            border = new Frame(x, y, width, height, borderChar);
+        }
+
+        public Window(int x, int y, int width, int height, char borderChar, int frame) : this(x, y, width, height, borderChar)
         {
             this.frame = frame;
         }
+
         public void Render()
         {
-
+            border.Render();
         }
     }
 }

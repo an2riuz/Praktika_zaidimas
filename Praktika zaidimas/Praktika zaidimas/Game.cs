@@ -20,10 +20,10 @@ namespace Praktika_zaidimas
             Hero Herojus = new Hero(0, 10, "Karys");
 
             // Priesu sukurimas
-            List<enemies> enemies = new List<enemies>();
+            List<Enemy> enemies = new List<Enemy>();
             for (int i = 0; i < 10; i++)
             {
-                enemies.Add(new enemies(enemyCount, rnd.Next(0, 10), rnd.Next(0, 10), "enemy" + enemyCount));
+                enemies.Add(new Enemy(enemyCount, rnd.Next(0, 10), rnd.Next(0, 10), "enemy" + enemyCount));
                 enemyCount++;
             }
             // Ekrano sukurimas
@@ -31,19 +31,19 @@ namespace Praktika_zaidimas
             myGame.SetHero(new Hero(5, 5, "HERO"));
 
             Herojus.PrintInfo();
-            foreach (enemies enemy in enemies)
+            foreach (Enemy enemy in enemies)
             {
                 enemy.PrintInfo();
             }
 
             Herojus.MoveLeft();
-            foreach (enemies enemy in enemies)
+            foreach (Enemy enemy in enemies)
             {
                 enemy.MoveDown();
             }
 
             Herojus.PrintInfo();
-            foreach (enemies enemy in enemies)
+            foreach (Enemy enemy in enemies)
             {
                 enemy.PrintInfo();
             }
@@ -53,7 +53,7 @@ namespace Praktika_zaidimas
             myGame.GetHero().MoveLeft();
             myGame.MoveAllEnemiesDown();
 
-            enemies secondEnemy = myGame.GetEnemyByID(1);
+            Enemy secondEnemy = myGame.getEnemyById(1);
             if (secondEnemy != null)
             {
                 secondEnemy.MoveDown();
