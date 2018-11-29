@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Praktika_zaidimas.GUI
 {
-    class GuiObject
+    abstract class GuiObject
     {
         protected int _x;
         protected int _y;
@@ -20,5 +20,6 @@ namespace Praktika_zaidimas.GUI
             _width = width;
             _height = height;
         }
+        public void Render() { }
     }
 }

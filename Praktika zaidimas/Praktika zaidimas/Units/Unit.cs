@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Praktika_zaidimas.Units
 {
-    class Unit
+    abstract class Unit
     {
         // Kintamieji
         
